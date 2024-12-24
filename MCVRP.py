@@ -12,10 +12,10 @@ def function(rho, tau, epsilon):
     theta = 1-tau
     return (1+zeta(rho,tau,epsilon))/theta + (1-tau-theta)/(theta*(1-tau)) + 3*epsilon/(1-theta) + 3*rho/(1-rho)/(1-tau) - 1
 ############################################################################################################################################
-def f(epsilon): # t,r<=1/6
+def f(epsilon): # 0<rho, tau<=1/6
     min_found=1000
-    for i in range(1667):
-        for j in range(1667):
+    for i in range(1666):
+        for j in range(1666):
             rho=(i+1)/10000; tau=(j+1)/10000
             tem = function(rho, tau, epsilon)
             if min_found > tem: min_found = tem
